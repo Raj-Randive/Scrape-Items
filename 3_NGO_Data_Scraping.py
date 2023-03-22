@@ -10,7 +10,7 @@ Sectors_Working = []
 
 
 
-for i in range(1, 50):
+for i in range(1, 3):
     url = "https://ngodarpan.gov.in/index.php/home/statewise_ngo/7608/24/"+str(i)+"?per_page=10"
     r = requests.get(url)
     soup = BeautifulSoup(r.text, "lxml")
@@ -69,7 +69,7 @@ data = {
 #     NumArr.append(i)
 
 df = pd.DataFrame(data)
-# print(df)
-df.to_csv("E:/Just Code/Web Scraping using Python/CSV Files/test2.csv")
+print(df)
+#df.to_csv("E:/Just Code/Web Scraping using Python/CSV Files/test2.csv")
 
     
